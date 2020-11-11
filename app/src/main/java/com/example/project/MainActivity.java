@@ -1,6 +1,5 @@
 package com.example.project;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
@@ -11,7 +10,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     EditText username, password;
@@ -29,10 +27,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                if (username.getText().toString().equals("dung") && password.getText().toString().equals("123456")){
+                if (username.getText().toString().equals("dung") && password.getText().toString().equals("675105024")){
                     openResultActivity();
                 }else {
-                    Toast.makeText(this.context, "Please enter your name", Toast.LENGTH_LONG).show();
+                    CustomToast.makeText(MainActivity.this,"Sai thông tin đăng nhập",CustomToast.LONG,CustomToast.SUCCESS,true).show();
                 }
             }
         });
